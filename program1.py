@@ -4,7 +4,7 @@ class Solution(object):
         queue = []
         for c in s:
             if c in ['(', '{', '[']:
-                queue += c
+                queue.append(c)
             elif c in [')']:
                 if queue[-1] == '(':
                     queue.pop()
