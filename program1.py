@@ -1,23 +1,23 @@
 class Solution(object):
     def isValid(self, s):
         valid = False
-        stack = []
+        queue = []
         for c in s:
             if c in ['(', '{', '[']:
-                stack += c
+                queue += c
             elif c in [')']:
-                if stack[-1] == '(':
-                    stack.pop()
+                if queue[-1] == '(':
+                    queue.pop()
                 else:
                     break
             elif c in ['}']:
-                if stack[-1] == '{':
-                    stack.pop()
+                if queue[-1] == '{':
+                    queue.pop()
                 else:
                     break
             elif c in [']']:
-                if stack[-1] == '[':
-                    stack.pop()
+                if queue[-1] == '[':
+                    queue.pop()
                 else:
                     break
 
