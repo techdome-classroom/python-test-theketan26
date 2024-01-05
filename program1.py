@@ -17,7 +17,7 @@ class Solution(object):
                     break
             elif c in [']']:
                 if stack[-1] == '[':
-                    queue.pop()
+                    stack.pop()
                 else:
                     break
 
