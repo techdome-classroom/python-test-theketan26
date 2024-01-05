@@ -12,11 +12,11 @@ class Solution(object):
                     break
             elif c in ['}']:
                 if stack[-1] == '{':
-                    queue.pop()
+                    stack.pop()
                 else:
                     break
             elif c in [']']:
-                if queue[-1] == '[':
+                if stack[-1] == '[':
                     queue.pop()
                 else:
                     break
