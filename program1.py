@@ -4,14 +4,14 @@ class Solution(object):
         stack = []
         for c in s:
             if c in ['(', '{', '[']:
-                queue += c
+                stack += c
             elif c in [')']:
-                if queue[-1] == '(':
-                    queue.pop()
+                if stack[-1] == '(':
+                    stack.pop()
                 else:
                     break
             elif c in ['}']:
-                if queue[-1] == '{':
+                if stack[-1] == '{':
                     queue.pop()
                 else:
                     break
